@@ -8,7 +8,6 @@ def find_shortest_paths(maze, sx, sy, ex, ey):
     heappush(pq, (0, sx, sy, 'E', set()))
     visited = set()
 
-    lowest_cost = 2**32 - 1
     paths = [[{'N': set(), 'E': set(), 'S': set(), 'W': set()} for _ in range(len(maze[0]))] for _ in range(len(maze))]
     costs = [[{'N': 2**32 - 1, 'E': 2**32 - 1, 'S': 2**32 - 1, 'W': 2**32 - 1} for _ in range(len(maze[0]))] for _ in range(len(maze))]
 
